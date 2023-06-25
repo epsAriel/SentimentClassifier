@@ -11,6 +11,13 @@ This project focuses on the important task of detecting cyberbullying on social 
 - Model Training: Users can choose from multiple training models, including logistic regression, support vector machines (SVM), and random forest, to train a classification model on the preprocessed data.
 - Post Classification: Users can input a social media post, and the system will classify it into one of the cyberbullying categories.
 
+## Downloads:
+you need to download those files in order to use the application !
+1. Glove: https://drive.google.com/file/d/1i4C7NhGAyH0Eiq8Xp_mVbaJbJiwRPKmp/view?usp=drive_link
+2. Fasttext: https://drive.google.com/file/d/1yTXFVvOYfoUOtxjm21lFeUl3gRUOTrVl/view?usp=drive_link
+
+* put the files in the main folder (same directory where the run.py file is)
+
 ## Installation
 
 1. Create a virtual environment to isolate the project dependencies.
