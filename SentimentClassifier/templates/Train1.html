@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">Train & Preprocessing</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('Train1')}}"><</a>
+    <form id="aboutSection" method="POST" action="">
+        <h1>Training settings:</h1>
+        <div>
+            <h2>Preprocessor select:</h2>
+            <section class="info">
+                <label for="cleaner">cleaner</label>
+                <input type="checkbox" name="cleaner" id="cleaner">
+                
+                <label for="lower">lower</label>
+                <input type="checkbox" name="lower" id="lower">
+                
+                <label for="stemming">stemming</label>
+                <input type="checkbox" name="stemming" id="stemming">
+                
+                <label for="lemma">lemma</label>
+                <input type="checkbox" name="lemma" id="lemma">
+                
+                <label for="stopwords">stopwords</label>
+                <input type="checkbox" name="stopwords" id="stopwords">
+                
+                <label for="speller">speller</label>
+                <input type="checkbox" name="speller" id="speller">
+            </section>
+        </div>
+        <div>
+            <h2>Text representation select:</h2>
+            <section class="info">
+                <select name="textRep" id="textRep">
+                    <option value="bow">bag of words</option>
+                    <option value="tfidf">tf-idf</option>
+                    <option value="word2vec">word2vec</option>
+                    <option value="glove">glove</option>
+                    <option value="fasttext">fasttext</option>
+                </select>
+            </section>
+        </div>
+        <div>
+            <h2>Model select:</h2>
+            <section class="info">
+                <select name="model" id="model">
+                    <option value="logisticRegression">Logistic Regression</option>
+                    <option value="SVM">SVM</option>
+                    <option value="randomForest">Random Forest</option>
+                </select>
+            </section>
+        </div>
+        <button>Save and Train</button>
+    </form>
+    <a class="arrow" href="{{url_for('Train1')}}">></a>
+{% endblock content %}

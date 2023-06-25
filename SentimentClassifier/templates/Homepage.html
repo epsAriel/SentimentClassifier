@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+    <p id="title">Sentiment Classifier</p>
+{% endblock title %}
+
+
+{% block content %}
+    <a class="arrow" href="{{url_for('HomePage')}}"><</a>
+    <section class="home">
+        <a class="MainLinks" href="{{url_for('About1')}}">
+            <img src="static/data.png" alt="">
+            <p>About the Data</p>
+            
+        </a>
+        <a class="MainLinks" href="{{url_for('Train1')}}">
+            <img src="static/ai.png" alt="">
+            <p>Train Model & Preproceesing</p>
+        </a>
+        <a class="MainLinks" href="{{url_for('Test1')}}">
+            <img src="static/classification.png" alt="">
+            <p>Test Model</p>
+        </a>
+    </section>
+    <a class="arrow" href="{{url_for('HomePage')}}">></a>
+{% endblock content %}

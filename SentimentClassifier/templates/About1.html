@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">About The Data</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('About1')}}"><</a>
+    <section id="aboutSection">
+        <h1>Data Description</h1>
+
+        <table>
+            <tr>
+            {% for i in data.columns %}
+            <th>{{i}}</th>
+            {% endfor %}
+            </tr>
+            
+            {% for i in range(data.shape[0]) %}
+            <tr>
+            <td>{{data['post'][i]}}</td>
+            <td>{{data['sentiment'][i]}}</td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+        
+        <p>
+            As social media usage becomes increasingly prevalent in every age group, a vast majority of citizens rely on this essential medium for day-to-day communication. Social media’s ubiquity means that cyberbullying can effectively impact anyone at any time or anywhere, and the relative anonymity of the internet makes such personal attacks more difficult to stop than traditional bullying.
+        </p>
+
+        <p>
+            On April 15th, 2020, UNICEF issued a warning in response to the increased risk of cyberbullying during the COVID-19 pandemic due to widespread school closures, increased screen time, and decreased face-to-face social interaction. The statistics of cyberbullying are outright alarming: 36.5% of middle and high school students have felt cyberbullied and 87% have observed cyberbullying, with effects ranging from decreased academic performance to depression to suicidal thoughts.
+        </p>
+        
+        <p>
+            In light of all of this, this dataset contains more than 47000 tweets labelled according to the class of cyberbullying:
+        </p>
+        
+        <ul>
+            <li>Age</li>
+            <li>Ethnicity</li>
+            <li>Gender</li>
+            <li>Religion</li>
+            <li>Other type of cyberbullying</li>
+            <li>Not cyberbullying</li>
+        </ul>
+
+        <p>
+            The data has been balanced in order to contain ~8000 of each class.
+        </p>
+    </section>
+    <a class="arrow" href="{{url_for('About2')}}">></a>
+{% endblock content %}

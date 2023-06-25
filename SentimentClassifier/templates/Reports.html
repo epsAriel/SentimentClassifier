@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">Train & Preprocessing</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('Train1')}}"><</a>
+    <section id="aboutSection" method="POST" action="">
+        <h1>Reports:</h1>
+
+        {% for report in reports %}
+        <div>
+            <a href="{{ url_for('report_details', report_id=report.id) }}"> Report number - {{report.id}}:</a>
+            <section class="info">
+                <label for="">Text rep:{{report.text_rep}}</label>
+                <label for="">Model:{{report.model}}</label>
+                <label for="">Acc:{{report.acc}}</label>
+            </section>
+        </div>
+        {% endfor %}
+    </section>
+    <a class="arrow" href="{{url_for('Train1')}}">></a>
+{% endblock content %}

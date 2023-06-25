@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">About The Data</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('About1')}}"><</a>
+    <section id="aboutSection">
+        <h1>Data summary: </h1>
+        {% for i in data_info%}
+            {% if "<" in i %}
+                <p style="font-weight:bold; text-decoration:underline;">{{i[1:]}}</p>
+            {% else %}
+                <p>{{i}}</p>
+            {% endif %}
+        {% endfor %}
+    </section>
+    <a class="arrow" href="{{url_for('About3')}}">></a>
+{% endblock content %}
+
+
+
+
+
+
+

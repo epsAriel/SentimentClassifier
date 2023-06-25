@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">About The Data</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('About2')}}"><</a>
+    <section id="aboutSection">
+        <h1>EDA Report</h1>
+        <div>
+            <h2>Data basic information:</h2>
+            <section class="info">
+                <img src="/static/postLength.JPG" alt="dasd">
+                <img src="/static/postWords.JPG" alt="dasd">
+            </section>
+        </div>
+        <div>
+            <h2>Data labels distribution:</h2>
+            <section class="info">
+                <img id="pie" src="/static/pie.JPG" alt="dasd">
+                <img id="pie" src="/static/piel.JPG" alt="dasd">
+            </section>
+        </div>
+        <div>
+            <h2>Data most common words/tags/users per category:</h2>
+            <section class="info">
+                <img src="/static/commonWordsAge.JPG" alt="dasd">
+                <img src="/static/hashA.JPG" alt="dasd">
+                <img src="/static/userA.JPG" alt="dasd">
+            </section>
+            <section class="info">
+                <img src="/static/commonEtni.JPG" alt="dasd">
+                <img src="/static/hashE.JPG" alt="dasd">
+                <img src="/static/userE.JPG" alt="dasd">
+            </section>
+            <section class="info">
+                <img src="/static/commonGender.JPG" alt="dasd">
+                <img src="/static/hashG.JPG" alt="dasd">
+                <img src="/static/userG.JPG" alt="dasd">
+            </section>
+            <section class="info">
+                <img src="/static/commonReligion.JPG" alt="dasd">
+                <img src="/static/hashR.JPG" alt="dasd">
+                <img src="/static/userR.JPG" alt="dasd">
+            </section >
+            <section class="info">
+                <img src="/static/commonO.JPG" alt="dasd">
+                <img src="/static/hashO.JPG" alt="dasd">
+                <img src="/static/userO.JPG" alt="dasd">
+            </section>
+            <section class="info">
+                <img src="/static/commonNot.JPG" alt="dasd">
+                <img src="/static/hashN.JPG" alt="dasd">
+                <img src="/static/userN.JPG" alt="dasd">
+            </section>
+        </div>
+        <div>
+            <h2>Data wordCloud per category:</h2>
+            <section class="info" >
+                <img src="/static/wordAge.JPG" alt="dasd">
+                <img src="/static/wordEtni.JPG" alt="dasd">
+                <img src="/static/wordGender.JPG" alt="dasd">
+                <img src="/static/wordReligion.JPG" alt="dasd">
+                <img src="/static/wordO.JPG" alt="dasd">
+                <img src="/static/wordNot.JPG" alt="dasd">
+            </section>
+        </div>
+        <div>
+            <h2>Data all posts information:</h2>
+            <section>
+                <img src="/static/mostCommonAll.JPG" alt="dasd">
+                <img src="/static/CommonHashAll.JPG" alt="dasd">
+                <img src="/static/CommonusersAll.JPG" alt="dasd">
+            </section>
+            <section>
+                <img src="/static/wordCloudAll.JPG" alt="dasd">
+            </section>
+        </div>
+    </section>
+    <a class="arrow" href="{{url_for('About4')}}">></a>
+{% endblock content %}
+
+
+

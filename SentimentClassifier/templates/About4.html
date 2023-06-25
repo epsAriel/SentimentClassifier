@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">About The Data</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('About3')}}"><</a>
+    <section id="aboutSection">
+        <h1>Graphs</h1>
+        <div>
+            <h2>Hash Graph:</h2>
+            <section class="info">
+                <img class="gr" src="/static/hashGraph.JPG" alt="dasd">
+                Top 10 nodes by degree centrality: ['MKR', 'mkr', 'BlameOneNotAll', 'ISIS', 'Islam', 'coon', 'stopwadhwa2015', 'MKR2015', 'mkr2015', 'notsexist']
+            </section>
+        </div>
+        <div>
+            <h2>Users Graph:</h2>
+            <section class="info">
+                <img class="gr" src="/static/userGraph.JPG" alt="dasd">
+                Top 10 nodes by degree centrality: ['Spacekatgal', 'freebsdgirl', 'ChrisWarcraft', 'IsraeliRegime', 'mykitchenrules', 'BilalIGhumman', 'tayyoung_:', 'MaxBlumenthal', 'MT8_9', 'greenlinerzjm']
+            </section>
+        </div>
+    </section>
+    <a class="arrow" href="{{url_for('About4')}}">></a>
+{% endblock content %}

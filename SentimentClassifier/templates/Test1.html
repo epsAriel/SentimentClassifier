@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">Test Model</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('Test1')}}"><</a>
+    <form id="TestSection" method="POST" action="">
+        <h1>Enter Sentence:</h1>
+        <input type="text" name="sentence" id="sentence">
+        <button>Submit</button>
+    </form>
+    <a class="arrow" href="{{url_for('Test1')}}">></a>
+{% endblock content %}

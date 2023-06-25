@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <p id="title">Train & Preprocessing</p>
+{% endblock title %}
+
+{% block content %}
+    <a class="arrow" href="{{url_for('Train1')}}"><</a>
+    <section id="aboutSection" method="POST" action="">
+        <h1>Training settings:</h1>
+        <div>
+            <h2>Preprocessor selected:</h2>
+            <section class="info">
+                
+                {% if preprocessor.cleaner %}
+                <label for="cleaner">cleaner</label>
+                {% endif %}
+                
+                {% if preprocessor.lower %}
+                <label for="lower">lower</label>
+                {% endif %}
+                
+                {% if preprocessor.stemming %}
+                <label for="stemming">stemming</label>
+                {% endif %}
+                
+                {% if preprocessor.lemma %}
+                <label for="lemma">lemma</label>
+                {% endif %}
+
+                {% if preprocessor.stopwords %}
+                <label for="stopwords">stopwords</label>
+                {% endif %}
+
+                {% if preprocessor.speller %}
+                <label for="speller">speller</label>
+                {% endif %}
+
+            </section>
+        </div>
+        <div>
+            <h2>Text representation selected:</h2>
+            <section class="info">
+                <label for="speller">{{report.text_rep}}</label>
+            </section>
+        </div>
+        <div>
+            <h2>Model select:</h2>
+            <section class="info">
+                <label for="speller">{{report.model}}</label>
+                <label for="speller">{{report.acc}}</label>
+            </section>
+        </div>
+    </section>
+    <a class="arrow" href="{{url_for('Train1')}}">></a>
+{% endblock content %}
