@@ -33,7 +33,7 @@ This project focuses on the important task of detecting cyberbullying on social 
 
 ## Usage
 
-
+![Alt text](Video.gif)
 
 ## Contributing
 
